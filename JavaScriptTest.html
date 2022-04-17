@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>JavaSript</title>
+	
+	
+	<script>
+		//fonction...
+		function sayhello(who){
+			document.write("hello toi " + who);
+		}
+
+		function ins() {
+			var nom = document.getElementById("nom").value;
+			var prenom = document.getElementById("prenom").value;
+			var email = document.getElementById("email").value;
+			var pass = document.getElementById("pass").value;
+			
+			if(email == "aikaglobal96@gmail.com" && pass == "Steevenson@96"){
+				alert(document.getElementById("result").value="bienvenue "+prenom+" "+nom);
+				
+			}
+			else{
+			    alert(document.getElementById("result").value="ce n'est pas "+prenom+" "+nom);
+		}
+		}
+
+		function opera(){
+			var n1 = parseInt(document.getElementById("N1").value);
+			var n2 = parseInt(document.getElementById("N2").value);
+			var sig = document.getElementById("sig").value;
+			
+			if(sig == "+"){
+				document.getElementById("resulta").value=n1+n2;
+
+			}
+			else if(sig == "-"){
+				document.getElementById("resulta").value=n1-n2;
+
+			}
+			else if(sig == "*"){
+				document.getElementById("resulta").value=n1*n2;
+
+			}
+			else if(sig == "/"){
+				document.getElementById("resulta").value=n1/n2;
+
+			}
+			
+
+			
+		}
+	</script>
+
+</head>
+
+<body>
+		<script>
+			//affichage...
+			document.write("Hello World"+"<br>");
+
+
+			//variable...
+			var nbre1, nbre2, som;
+			var nom = "SteeveHandson";
+			var cons = true;
+			nbre1=5;
+			nbre2=2;
+
+			//calcul...
+			som=nbre2+nbre1;
+			document.write(nom + " a ecrit que : " + nbre1 + " + " + nbre2 + " = " + som + " et c'est " + cons +"<br>");
+			
+			var a = ["aika","global",8];
+			document.write(a[0]+"<br>");
+			document.write(a[1]+"<br>");
+			document.write(a[2]+"<br>");
+
+			//affichage fonction...
+			sayhello("aika"+"<br><br>");
+
+			//condition...
+			var b=10;
+			var c = "aika";
+			if (b > 5 && c == "aika"){
+				document.write("b est superieur a 5"+"<br>");
+			}
+			else {
+				alert(b);
+			}
+			document.write("<br>compter avec un boucle for...<br>")
+			//boucle for...
+			for(i=0; i<=5; i++){
+				document.write("nous avons:"+i+ "<br>");
+			}
+
+			//boucle while...
+			var count =1;
+			document.write("<br>compter avec un boucle while...<br>")
+			while(count<=10){
+				document.write("je compte a:"+count+"<br>");
+				count++;
+			}
+			document.write("j'ai termine de compter a 10<br>");
+
+		</script>
+
+		<p>
+			<br>
+			<b>nous allons remplir ce formulaire...</b>
+		</p>
+		<input type ="text" id="nom" placeholder="nom">
+		<br><br>
+		<input type="text" id ="prenom" placeholder="prenom">
+		<br><br>
+		<input type="email" id="email" placeholder="email">
+		<br><br>
+		<input type="password" id="pass" placeholder="mot de passe">
+		<br><br>
+		<button onclick="ins()" id="result">connexion</button>
+		
+
+		<p>
+			<br>
+			 <b> Nous allons faire une operation...</b>
+			</p>
+
+			<input id="N1" >
+			<br>
+			<select id="sig">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+			</select>
+			<br>
+			<input id="N2" >
+			<br>
+			<br>
+			<button onclick="opera()">resultat</button>
+			<input type= "int" id="resulta">
+
+ 
+</body>
+
+</html>
